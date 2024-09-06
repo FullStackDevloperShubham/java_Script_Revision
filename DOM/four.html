@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: black; color: white;">
+
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+
+</body>
+
+
+<script>
+  function addLanguage(langName) {
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+  }
+  addLanguage('typeScript')
+  addLanguage('css')
+
+  function addOptimizeLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+  }
+  addOptimizeLanguage('Rust')
+
+  // Eddite the values
+  const second_Languge = document.querySelector('li:nth-child(2)')
+  const newLi = document.createElement('li')
+  newLi.textContent = 'C'
+  second_Languge.replaceWith(newLi)
+
+  const thirdLangue = document.querySelector('li:first-child')
+  const firstLanguegEddite = document.createElement('li')
+  firstLanguegEddite.textContent = 'C++'
+  thirdLangue.replaceWith(firstLanguegEddite)
+
+  // remove
+  const lastLangueDelete = document.querySelector('li:last-child')
+  lastLangueDelete.remove()
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asyncronus | JavaScript</title>
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.995); color: white;">
+  <h1>Asyncronus JavaScript</h1>
+  <button id="stop">Stop</button>
+
+  <script>
+    const say = function () {
+      console.log("javascript")
+    }
+
+    const changeText = function () {
+      document.querySelector('h1').innerHTML = "hello java script"
+    }
+
+    const timeOut = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function () {
+      clearTimeout(timeOut)
+      console.log("stop")
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api | in javaScript</title>
+</head>
+
+<body style="background-color: black; color: white;">
+
+
+
+  <h1 id="data">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa odit vel. Facilis doloribus possimus eos explicabo
+    at odit quasi, quibusdam consequuntur, aliquid cupiditate ad inventore doloremque ea dolor accusantium.
+  </h1>
+
+
+
+
+
+</body>
+<script>
+  const url = 'https://api.github.com/users/FullStackDevloperShubham'
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', url)
+  // console.log(xhr.readyState)
+  xhr.onreadystatechange = function () {
+    console.log(xhr.readyState)
+    if (xhr.readyState === 4) {
+      const data = JSON.parse(this.responseText)
+      console.log(data.bio)
+    }
+  }
+  xhr.send()
+</script>
+
+
+
+</html>
